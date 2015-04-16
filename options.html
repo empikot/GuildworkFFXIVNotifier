@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Guildwork FFXIV Notifications Chrome Extension</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>
+    <img src="48.png" alt="Pull Request">
+    Guildwork FFXIV
+</h1>
+
+<h2>Options</h2>
+
+<form id="options">
+    <div>
+        Enable notification
+        <select name="activated" id="activated">
+            <option value="0"> OFF </option>
+            <option value="1"> ON </option>
+        </select>
+    </div>
+    <div>
+        Pull interval
+        <select name="frequency" id="frequency">
+		    <option>15</option>
+            <option>30</option>
+            <option>60</option>
+            <option>120</option>
+            <option>180</option>
+            <option>300</option>
+            <option>600</option>
+            <option>900</option>
+            <option>1800</option>
+        </select>
+        seconds.
+    </div>
+    <div>
+        Selected server
+        <select name="server" id="server"></select>
+    </div>
+</form>
+<script src="options.js"></script>
+</body>
+</html>
