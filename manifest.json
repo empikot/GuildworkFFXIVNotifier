@@ -1,0 +1,29 @@
+{
+  "name": "Guildwork FFXIV Notifications",
+  "short_name": "Guildwork FFXIV",
+  "description": "Displays notifications of what is happening on FFXIV server.",
+  "version": "0.1.4",
+  "omnibox": { "keyword" : "ffxiv" },
+  "icons": {
+    "128": "128.png",
+    "48": "48.png",
+    "16": "16.png"
+  },
+  "permissions": [
+    "notifications",
+    "tabs",
+    "storage",
+    "http://*/",
+    "https://*/"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "128.png"
+  },
+  "homepage_url": "http://guildwork.com/",
+  "offline_enabled": false
+}
