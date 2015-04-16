@@ -1,44 +1,62 @@
 <html>
 <head>
     <title>Guildwork FFXIV Notifications Chrome Extension</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-<h1>
-    <img src="48.png" alt="Pull Request">
-    Guildwork FFXIV
-</h1>
-
-<h2>Options</h2>
-
-<form id="options">
-    <div>
-        Enable notification
-        <select name="activated" id="activated">
-            <option value="0"> OFF </option>
-            <option value="1"> ON </option>
-        </select>
+    <div class="container">
+        <div class="content">
+            <div class="page-header">
+                <center>
+                    <h1><img src="48.png" alt="FFXIV">GuildWork FFXIV Notifications<small> settings panel</small></h1>
+                </center>
+            </div>
+            <div class="row">
+                <div class="span8">
+                <form>
+                <fieldset>
+                    <legend>Settings</legend>
+                    <div class="clearfix">
+                        <label for="activated">Enable notification:</label>
+                        <div class="input">
+                            <select name="activated" id="activated">
+                                <option value="0"> OFF </option>
+                                <option value="1"> ON </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <label for="frequency">Pull interval (in seconds):</label>
+                        <div class="input">
+                            <select name="frequency" id="frequency">
+                                <option>15</option>
+                                <option>30</option>
+                                <option>60</option>
+                                <option>120</option>
+                                <option>180</option>
+                                <option>300</option>
+                                <option>600</option>
+                                <option>900</option>
+                                <option>1800</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <label for="server">Selected server:</label>
+                        <div class="input">
+                            <select name="server" id="server"></select>
+                        </div>
+                    </div>
+                </fieldset>
+                </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; empikot</p>
+        </footer>
     </div>
-    <div>
-        Pull interval
-        <select name="frequency" id="frequency">
-		    <option>15</option>
-            <option>30</option>
-            <option>60</option>
-            <option>120</option>
-            <option>180</option>
-            <option>300</option>
-            <option>600</option>
-            <option>900</option>
-            <option>1800</option>
-        </select>
-        seconds.
-    </div>
-    <div>
-        Selected server
-        <select name="server" id="server"></select>
-    </div>
-</form>
-<script src="options.js"></script>
+    <script src="options.js"></script>
 </body>
 </html>
