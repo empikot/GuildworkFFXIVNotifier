@@ -150,9 +150,10 @@ function showChannel(channel) {
 }
 
 function show() {
-  showChannel('hunts');
-  showChannel('fates');
-  showChannel('zones');
+  var channels = localStorage.channels.split(",");
+  for (key in channels) {
+    showChannel(channels[key]);
+  }
 }
 
 function shouldShowNotification() {
@@ -172,8 +173,12 @@ var initialFateLaunch = 1;
 if (!localStorage.isInitialized) {
   localStorage.activated = 1;
   localStorage.frequency = 30;
-  localStorage.server = 'ffxiv/moogle'
+  localStorage.server = 'ffxiv/moogle';
   localStorage.isInitialized = true;
+}
+// update!
+if (typeof localStorage.channels == "undefined") {
+  localStorage.channels = ['hunts', 'zones', 'fates'];
 }
 
 var interval = 0; // The display interval, in seconds.
